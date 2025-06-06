@@ -33,10 +33,7 @@ SPHAK involves the following steps:
 The method outputs predicted viral family and spillover risk through SP score(Spillover Potential score).
 - **SP score calculation**: 
 - **Formula**:
-  - Uses log-transformed Bayesian update rule:
-    \[
-    \log P(\text{host} | \text{k-mers}) = \sum_{i=1}^{n} \log P(k_i | \text{host}) + \log P(\text{host})
-    \]
+  SP score = elogP(A)-max_logelogP(A)-max_log+ elogP(B)-max_log                      
 
 
 
