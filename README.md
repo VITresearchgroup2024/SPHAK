@@ -51,15 +51,8 @@ pip install -r requirements.txt
 
 Adjust installation steps as needed for your environment.
 
-
-📌 Key Features
-Works across multiple virus families
-
-Handles both in-sample and out-of-sample predictions
-
-Supports integration with external host/virus data
-
-Modular: update host databases, k-mer size, or scoring logic independently
+```
+---
 
 📚 Citation
 Manuscript under preparation. Please contact the authors before citing.
