@@ -1,1 +1,6 @@
+biopython
+pandas
+numpy
+matplotlib
+scikit-learn
 
