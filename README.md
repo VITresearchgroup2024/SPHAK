@@ -56,11 +56,13 @@ Adjust installation steps as needed for your environment.
 ---
 
 📚 Citation
-Manuscript under preparation. Please contact the authors before citing.
+
+- Manuscript under preparation. Please contact the authors before citing.
 Developed by the VIT Research Group (2024–2025).
 
 📬 Contact
 For questions, please open an issue or email:
+✉️ vibin@cmscollege.ac.in
 ✉️ vinning372@gmail.com
 ✉️ ananyaprakash0105@gmail.com
 ✉️ kavyasree6424@gmail.com
