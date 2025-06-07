@@ -39,13 +39,11 @@ $$
 SP\ score = \frac{e^{\log P(A) - max\_log}}{e^{\log P(A) - max\_log} + e^{\log P(B) - max\_log}}
 $$
 
+**The Cauchy-Schwarz Inequality**
 
-SP score = e^{log P(A) − max_log} / (e^{log P(A) − max_log} + e^{log P(B) − max_log})
-
-
-
-               
-
+```math
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+```
 
 
 ---
