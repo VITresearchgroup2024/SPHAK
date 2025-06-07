@@ -40,13 +40,6 @@ SP\ score = \frac{e^{\log P(A) - max\_log}}{e^{\log P(A) - max\_log} + e^{\log P
 $$
 
 
-SP score = frac{e^{\log P(A) - `max\_log`}}{e^{\log P(A) - `max\_log`} + e^{\log P(B) - `max\_log`}}
-
-$$
-SP\ score = \frac{e^{\log P(A) - max\_log}}{e^{\log P(A) - max\_log} + e^{\log P(B) - max\_log}}
-$$
----
-
 ## ⚙️ Installation
 
 ```bash
