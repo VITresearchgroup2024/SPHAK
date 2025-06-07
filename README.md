@@ -40,7 +40,7 @@ SP\ score = \frac{e^{\log P(A) - max\_log}}{e^{\log P(A) - max\_log} + e^{\log P
 $$
 
 
-
+SP score = e^{log P(A) − max_log} / (e^{log P(A) − max_log} + e^{log P(B) − max_log})
 
 
 
