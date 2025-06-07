@@ -41,7 +41,7 @@ $$
 
 
 $$
-\text{SP score} = \frac{e^{\log P(A) - \max_{\log}}}{e^{\log P(A) - \max_{\log}} + e^{\log P(B) - \max_{\log}}}
+\text{SP score} = \frac{e^{\log P(A) - \max{_\log}}}{e^{\log P(A) - \max{_\log}} + e^{\log P(B) - \max{_\log}}}
 $$
 
 
