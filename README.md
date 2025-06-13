@@ -36,7 +36,7 @@ The method outputs predicted viral family and spillover risk through SP score(Sp
 **SP score**:
 
 $$
-SP\ score = \frac{e^{\log P(A) - \mathrm{max\_log}}}{e^{\log P(A) - \mathrm{max\_log}} + e^{\log P(B) - \mathrm{max\_log}}}
+SP\ score = \frac{e^{\log P(A) - \mathtt{max\_log}}}{e^{\log P(A) - \mathtt{max\_log}} + e^{\log P(B) - \mathtt{max\_log}}}
 $$
 
 
