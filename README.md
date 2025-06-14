@@ -54,7 +54,7 @@ Adjust installation steps as needed for your environment.
 
 📚 Citation
 
-- Manuscript under preparation. Please contact the authors before citing.
+- Manuscript under review. Please contact the authors before citing.
 Developed by the VIT Research Group (2024–2025).
 
 📬 Contact
