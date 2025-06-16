@@ -16,7 +16,7 @@ def filter_kmers(kmers):
     return [kmer for kmer in kmers if 'X' not in kmer]
 
 # === Load the Pickled File ===
-with open('family_kmers.pkl', 'rb') as f:
+with open('reference_database.pkl', 'rb') as f:      # give correct path and filename
     data = pickle.load(f)
 
 family_kmers = data['family_kmers']
