@@ -6,9 +6,9 @@
 
 Traditional models rely on ecological or phenotypic features, or focus primarily on genomic sequences, to predict host spillover. SPHAK identifies proteome-level sequence patterns specific to animal- and plant-infecting viruses to:
 
-- Predict whether a virus originates from an animal or plant host
+- Predict the viral family 
 - Score the likelihood of host switching or spillover
-- Generalize across diverse virus families and protein types
+- Generalize across diverse virus families in different kingdoms
 
 ## 🔧 Pipeline Overview
 
