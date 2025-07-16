@@ -15,9 +15,10 @@ setup(
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'sphak=cli:main',
+        'sphak=sphak.cli:main',
         ],
     },
+
     classifiers=[
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
