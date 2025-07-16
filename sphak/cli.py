@@ -4,6 +4,7 @@ from sphak.main import analyze_sequence
 from importlib.resources import files
 import sphak.data
 import os
+import pickle
 
 def main():
     parser = argparse.ArgumentParser()
@@ -18,7 +19,16 @@ def main():
 
     try:
         db_path = files(sphak.data).joinpath(db_filename)
-        analyze_sequence(args.input, str(db_path))
+        if not db_path.exists():
+            raise FileNotFoundError()
+
+        # ✅ Unpickle here
+        with db_path.open('rb') as f:
+            reference_data = pickle.load(f)
+
+        # ✅ Pass the unpickled dict
+        analyze_sequence(args.input, reference_data)
+
     except FileNotFoundError:
         raise FileNotFoundError(
             f"Reference database not found for host type '{args.host_type}' in sphak/data/{db_filename}"
