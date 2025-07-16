@@ -1,8 +1,7 @@
 import argparse
-import sys
 from sphak.main import analyze_sequence
 from importlib.resources import files
-import sphak.data  
+import sphak.data  # this must point to the `data/` submodule (which has `__init__.py`)
 
 def main():
     parser = argparse.ArgumentParser()
