@@ -16,8 +16,8 @@ def filter_kmers(kmers):
     return [kmer for kmer in kmers if 'X' not in kmer]
 
 # === Load the Pickled File ===
-with open('reference_database.pkl', 'rb') as f:      # give correct path and filename
-    data = pickle.load(f)
+    with open(reference_db, 'rb') as f:
+        data = pickle.load(f)
 
 family_kmers = data['family_kmers']
 total_kmers = data['total_kmers']
