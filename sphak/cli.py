@@ -1,9 +1,8 @@
 import argparse
-import os
 import sys
 from sphak.main import analyze_sequence
 import importlib.resources as pkg_resources
-import sphak
+import sphak.data  # 👈 This is important!
 
 def main():
     parser = argparse.ArgumentParser()
@@ -11,9 +10,14 @@ def main():
     parser.add_argument('--host_type', required=True, choices=['animal', 'plant'], help='Host type')
     args = parser.parse_args()
 
-    # Correct path to reference DB inside the installed package
+    db_filename = f"{args.host_type}_reference_database.pkl"
+
+    # Correct way: use sphak.data as the package
     try:
-        with pkg_resources.path(sphak, f"data/{args.host_type}_reference_database.pkl") as db_path:
+        with pkg_resources.path(sphak.data, db_filename) as db_path:
             analyze_sequence(args.input, str(db_path))
     except FileNotFoundError:
-        raise FileNotFoundError(f"Reference database not found for host type '{args.host_type}' in SPHAK's data folder")
+        raise FileNotFoundError(
+            f"Reference database not found for host type '{args.host_type}' "
+            f"in package at sphak/data/{db_filename}"
+        )
