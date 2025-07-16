@@ -1,14 +1,17 @@
+import os
 import argparse
-from sphak.main import analyze_sequence
+from sphak.main import analyze_sequence  
 
 def main():
-    parser = argparse.ArgumentParser(description="SPHAK CLI Tool")
-    parser.add_argument('--input', required=True, help='Path to input FASTA file')
+    parser = argparse.ArgumentParser(description="SPHAK: Predict host from query sequence")
+    parser.add_argument("--fasta", required=True, help="Input FASTA file")
+    parser.add_argument("--host_type", required=True, choices=["plant", "animal"], help="Type of host")
     args = parser.parse_args()
 
-    results = analyze_sequence(args.input)
+    base_dir = os.path.dirname(__file__)
+    db_path = os.path.join(base_dir, "data", f"{args.host_type}_reference_database.pkl")
 
-    print("Sequence_ID\tBest_Family\tPrediction\tPosterior\tCoverage")
-    for r in results:
-        print(f"{r['sequence_id']}\t{r['best_family']}\t{r['prediction']}\t{r['posterior']}\t{r['coverage']}")
+    if not os.path.exists(db_path):
+        raise FileNotFoundError(f"Reference database not found for host type '{args.host_type}' at {db_path}")
 
+    analyze_sequence(fasta_file=args.fasta, reference_db=db_path)
