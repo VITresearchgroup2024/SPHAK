@@ -13,7 +13,6 @@ def main():
 
     db_filename = f"{args.host_type}_reference_database.pkl"
 
-    # ✅ Validate input file first
     if not os.path.exists(args.input):
         raise FileNotFoundError(f"FASTA input file not found: {args.input}")
 
