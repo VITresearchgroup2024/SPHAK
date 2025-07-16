@@ -10,10 +10,7 @@ def generate_kmers(sequence, k):
 def filter_kmers(kmers):
     return [kmer for kmer in kmers if 'X' not in kmer]
 
-def analyze_sequence(fasta_file, reference_db):
-    # === Load the Pickled File ===
-    with open(reference_db, 'rb') as f:
-        data = pickle.load(f)
+def analyze_sequence(fasta_file, data): 
 
     family_kmers = data['family_kmers']
     total_kmers = data['total_kmers']
