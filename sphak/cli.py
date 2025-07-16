@@ -1,7 +1,9 @@
 import argparse
+import sys
+import pickle
 from sphak.main import analyze_sequence
 from importlib.resources import files
-import sphak.data  # this must point to the `data/` submodule (which has `__init__.py`)
+import sphak.data  # this is required for resource loading
 
 def main():
     parser = argparse.ArgumentParser()
@@ -12,8 +14,15 @@ def main():
     db_filename = f"{args.host_type}_reference_database.pkl"
 
     try:
-        db_path = files(sphak.data).joinpath(db_filename)
-        analyze_sequence(args.input, str(db_path))
+        # Load the file content directly as bytes
+        resource = files(sphak.data).joinpath(db_filename)
+        db_bytes = resource.read_bytes()  # ✅ works even in zip-packaged installations
+
+        # Unpickle directly from bytes
+        db_obj = pickle.loads(db_bytes)
+
+        analyze_sequence(args.input, db_obj)
+
     except FileNotFoundError:
         raise FileNotFoundError(
             f"Reference database not found for host type '{args.host_type}' "
