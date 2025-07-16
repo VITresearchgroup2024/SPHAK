@@ -3,7 +3,7 @@ import sys
 import pickle
 from sphak.main import analyze_sequence
 from importlib.resources import files
-import sphak.data  # this is required for resource loading
+import sphak.data 
 
 def main():
     parser = argparse.ArgumentParser()
