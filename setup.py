@@ -1,7 +1,10 @@
-from setuptools import setup, find_packages
-from pathlib import Path
+from setuptools.command.install import install
+import sys
 
-requirements = Path("requirements.txt").read_text().splitlines()
+class CustomInstallCommand(install):
+    def run(self):
+        super().run()
+        print("\n✅ Successfully installed SPHAK!\n")
 
 setup(
     name='sphak',
@@ -14,7 +17,7 @@ setup(
     python_requires='>=3.7',
     include_package_data=True,
     package_data={
-        'sphak.data': ['*.pkl'],   # ✅ Correct target: sphak.data
+        'sphak': ['data/*.pkl'],  
     },
     entry_points={
         'console_scripts': [
@@ -26,4 +29,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
+    cmdclass={
+        'install': CustomInstallCommand,  
+    }
 )
