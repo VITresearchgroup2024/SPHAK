@@ -2,19 +2,19 @@ from setuptools import setup, find_packages
 from setuptools.command.install import install
 from pathlib import Path
 
-# Try reading requirements.txt
 try:
     requirements = Path("requirements.txt").read_text().splitlines()
 except FileNotFoundError:
     requirements = []
 
-# Custom install command to show message
 class CustomInstallCommand(install):
     def run(self):
         super().run()
-        print("\n" + "="*50)
-        print("✅ Successfully installed SPHAK!")
-        print("="*50 + "\n")
+        print("\n" + "="*60)
+        print("🎉 SPHAK installation complete! Ready to predict like a pro 🧬")
+        print("🚀 Run 'sphak --help' to see available commands.")
+        print("="*60 + "\n")
+
 
 setup(
     name='sphak',
