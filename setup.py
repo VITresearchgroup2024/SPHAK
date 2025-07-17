@@ -2,11 +2,13 @@ from setuptools import setup, find_packages
 from setuptools.command.install import install
 from pathlib import Path
 
+# Try reading requirements.txt
 try:
     requirements = Path("requirements.txt").read_text().splitlines()
 except FileNotFoundError:
     requirements = []
 
+# Custom install command to show message
 class CustomInstallCommand(install):
     def run(self):
         super().run()
