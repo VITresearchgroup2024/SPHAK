@@ -3,6 +3,7 @@ import math
 from pybloom_live import BloomFilter
 import pickle
 from Bio import SeqIO
+from tabulate import tabulate
 
 def generate_kmers(sequence, k):
     return [sequence[i:i + k] for i in range(len(sequence) - k + 1)]
@@ -11,11 +12,9 @@ def filter_kmers(kmers):
     return [kmer for kmer in kmers if 'X' not in kmer]
 
 def analyze_sequence(fasta_file, data): 
-
     family_kmers = data['family_kmers']
     total_kmers = data['total_kmers']
 
-    # === Create k-mer Sets and Bloom Filters for Each Family ===
     family_kmer_sets = {}
     family_valid_ks = {}
     family_bloom_filters = {}
@@ -36,23 +35,20 @@ def analyze_sequence(fasta_file, data):
         family_valid_ks[family] = valid_ks
         family_bloom_filters[family] = bloom
 
-    # === Parse the FASTA File ===
     sequences = list(SeqIO.parse(fasta_file, "fasta"))
-    predictions = []
-    y_scores = []
+    result_rows = []
 
-    print("Sequence_ID\tBest_Family\tPrediction\tPrediction_Score\tCoverage")
+    print("\nSummary:")
+    print("--------")
 
     for record in sequences:
         sequence_id = record.id
         sequence = str(record.seq).upper()
 
-        # Generate test k-mers
         test_kmers = set()
         for k in range(6, 7):
             test_kmers.update(filter_kmers(generate_kmers(sequence, k)))
 
-        # Family matching
         best_family = None
         max_overlap = -1
         for family, bloom in family_bloom_filters.items():
@@ -62,7 +58,6 @@ def analyze_sequence(fasta_file, data):
                 best_family = family
                 max_overlap = overlap
 
-        # Coverage calculation
         covered_positions = set()
         if best_family:
             for k in range(6, 7):
@@ -71,7 +66,6 @@ def analyze_sequence(fasta_file, data):
                         covered_positions.update(range(i, i + k))
         coverage = len(covered_positions) / len(sequence) if sequence else 0.0
 
-        # Posterior probability
         if best_family not in family_kmers:
             posterior = 0.5
         else:
@@ -126,7 +120,14 @@ def analyze_sequence(fasta_file, data):
                     posterior = math.exp(log_likelihood_homo - max_log) / denominator
 
         posterior = np.clip(posterior, 0.0, 1.0)
-        y_scores.append(posterior)
-        predictions.append(1 if posterior > 0.5 else 0)
+        prediction = 1 if posterior > 0.5 else 0
 
-        print(f"{sequence_id}\t{best_family}\t{predictions[-1]}\t{posterior:.4f}\t{coverage:.4f}")
+        if prediction == 1:
+            print(f"The best family for the sequence '{sequence_id}' is '{best_family}', predicted to infect human with a score of {posterior:.4f} and coverage {coverage:.4f}.")
+        else:
+            print(f"The best family for the sequence '{sequence_id}' is '{best_family}', but it is NOT predicted to infect human (score = {posterior:.4f}, coverage = {coverage:.4f}).")
+
+        result_rows.append([sequence_id, best_family, prediction, round(posterior, 4), round(coverage, 4)])
+
+    print("\nTabular Result:")
+    print(tabulate(result_rows, headers=["Sequence_ID", "Best_Family", "Prediction", "Prediction_Score", "Coverage"], tablefmt="grid"))
