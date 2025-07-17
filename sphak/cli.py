@@ -5,11 +5,17 @@ from importlib.resources import files
 import sphak.data
 import os
 import pickle
+from pathlib import Path
+
+def show_install_message_once():
+    # Store flag in user home directory
+    flag_path = Path.home() / ".sphak_first_run"
+    if not flag_path.exists():
+        print("✅ SPHAK installed and ready to use! Use --help to see options.\n")
+        flag_path.write_text("shown")
 
 def main():
-    if not hasattr(sphak, '__install_message_shown__'):
-        print("✅ SPHAK installed and ready to use! Use --help to see options.\n")
-        setattr(sphak, '__install_message_shown__', True)
+    show_install_message_once()
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', required=True, help='Path to FASTA file')
