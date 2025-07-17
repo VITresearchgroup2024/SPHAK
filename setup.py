@@ -1,10 +1,18 @@
+from setuptools import setup, find_packages
 from setuptools.command.install import install
-import sys
+from pathlib import Path
+
+try:
+    requirements = Path("requirements.txt").read_text().splitlines()
+except FileNotFoundError:
+    requirements = []
 
 class CustomInstallCommand(install):
     def run(self):
         super().run()
-        print("\n✅ Successfully installed SPHAK!\n")
+        print("\n" + "="*50)
+        print("✅ Successfully installed SPHAK!")
+        print("="*50 + "\n")
 
 setup(
     name='sphak',
@@ -17,7 +25,7 @@ setup(
     python_requires='>=3.7',
     include_package_data=True,
     package_data={
-        'sphak': ['data/*.pkl'],  
+        'sphak': ['data/*.pkl'],
     },
     entry_points={
         'console_scripts': [
@@ -30,6 +38,6 @@ setup(
         'Operating System :: OS Independent',
     ],
     cmdclass={
-        'install': CustomInstallCommand,  
+        'install': CustomInstallCommand,
     }
 )
