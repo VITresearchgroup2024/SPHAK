@@ -1,45 +1,35 @@
-from setuptools import setup, find_packages
-from setuptools.command.install import install
-from pathlib import Path
+import argparse
+import sys
+from sphak.main import analyze_sequence
+from importlib.resources import files
+import sphak.data
+import os
+import pickle
 
-# Try reading requirements.txt
-try:
-    requirements = Path("requirements.txt").read_text().splitlines()
-except FileNotFoundError:
-    requirements = []
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--input', required=True, help='Path to FASTA file')
+    parser.add_argument('--host_type', required=True, choices=['animal', 'plant'], help='Host type')
+    args = parser.parse_args()
 
-# Custom install command to show message
-class CustomInstallCommand(install):
-    def run(self):
-        super().run()
-        print("\n" + "="*50)
-        print("✅ Successfully installed SPHAK!")
-        print("="*50 + "\n")
+    db_filename = f"{args.host_type}_reference_database.pkl"
 
-setup(
-    name='sphak',
-    version='0.1',
-    description='SPHAK: Sequence-based Prediction of Host Analysis using k-mers',
-    author='Vibin Ipe Thomas, Vinni N G, Ananya Prakash, Kavya S',
-    author_email='vibin@cmscollege.ac.in',
-    packages=find_packages(),
-    install_requires=requirements,
-    python_requires='>=3.7',
-    include_package_data=True,
-    package_data={
-        'sphak': ['data/*.pkl'],
-    },
-    entry_points={
-        'console_scripts': [
-            'sphak=sphak.cli:main',
-        ],
-    },
-    classifiers=[
-        'Programming Language :: Python :: 3',
-        'License :: OSI Approved :: MIT License',
-        'Operating System :: OS Independent',
-    ],
-    cmdclass={
-        'install': CustomInstallCommand,
-    }
-)
+    if not os.path.exists(args.input):
+        raise FileNotFoundError(f"FASTA input file not found: {args.input}")
+
+    try:
+        db_path = files(sphak.data).joinpath(db_filename)
+        if not db_path.exists():
+            raise FileNotFoundError()
+
+        # ✅ Unpickle here
+        with db_path.open('rb') as f:
+            reference_data = pickle.load(f)
+
+        # ✅ Pass the unpickled dict
+        analyze_sequence(args.input, reference_data)
+
+    except FileNotFoundError:
+        raise FileNotFoundError(
+            f"Reference database not found for host type '{args.host_type}' in sphak/data/{db_filename}"
+        )
