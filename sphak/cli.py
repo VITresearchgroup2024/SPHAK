@@ -7,6 +7,10 @@ import os
 import pickle
 
 def main():
+    if not hasattr(sphak, '__install_message_shown__'):
+        print("✅ SPHAK installed and ready to use! Use --help to see options.\n")
+        setattr(sphak, '__install_message_shown__', True)
+
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', required=True, help='Path to FASTA file')
     parser.add_argument('--host_type', required=True, choices=['animal', 'plant'], help='Host type')
@@ -22,11 +26,9 @@ def main():
         if not db_path.exists():
             raise FileNotFoundError()
 
-        # ✅ Unpickle here
         with db_path.open('rb') as f:
             reference_data = pickle.load(f)
 
-        # ✅ Pass the unpickled dict
         analyze_sequence(args.input, reference_data)
 
     except FileNotFoundError:
