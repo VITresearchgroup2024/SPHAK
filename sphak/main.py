@@ -122,12 +122,15 @@ def analyze_sequence(fasta_file, data):
         posterior = np.clip(posterior, 0.0, 1.0)
         prediction = 1 if posterior > 0.5 else 0
 
+        # Human-readable summary
         if prediction == 1:
             print(f"The best family for the sequence '{sequence_id}' is '{best_family}', predicted to infect human with a score of {posterior:.4f} and coverage {coverage:.4f}.")
         else:
             print(f"The best family for the sequence '{sequence_id}' is '{best_family}', but it is NOT predicted to infect human (score = {posterior:.4f}, coverage = {coverage:.4f}).")
 
+        # Add to table output
         result_rows.append([sequence_id, best_family, prediction, round(posterior, 4), round(coverage, 4)])
 
+    # Tabular result
     print("\nTabular Result:")
     print(tabulate(result_rows, headers=["Sequence_ID", "Best_Family", "Prediction", "Prediction_Score", "Coverage"], tablefmt="grid"))
