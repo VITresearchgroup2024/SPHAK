@@ -50,6 +50,10 @@ Adjust installation steps as needed for your environment.
 ```
 ---
 
+## 📊 Dataset
+The dataset curated for this project is publicly available on Zenodo:
+👉 SPHAK: [https://doi.org/10.5281/zenodo.16326468](url)
+
 ## 📚 Citation
 
 - Manuscript under review. Please contact the authors before citing.
