@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-Traditional models rely on ecological or phenotypic features, or focus primarily on genomic sequences, to predict host spillover. SPHAK identifies proteome-level sequence patterns specific to animal- and plant-infecting viruses to:
+Traditional models rely on ecological or phenotypic features, or focus primarily on genomic sequences, to predict host spillover. SPHAK is a comand line interface tool that identifies proteome-level sequence patterns specific to animal- and plant-infecting viruses to:
 
 - Predict the viral family 
 - Score the likelihood of host switching or spillover
@@ -43,7 +43,7 @@ The method outputs predicted viral family and spillover risk through SP score(Sp
 ```bash
 git clone https://github.com/VITresearchgroup2024/SPHAK.git
 cd SPHAK
-pip install -r requirements.txt
+pip install .
 
 Adjust installation steps as needed for your environment.
 
