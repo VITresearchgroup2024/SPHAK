@@ -51,7 +51,7 @@ Adjust installation steps as needed for your environment.
 ---
 
 ## 📊 Dataset
-👉 The dataset curated for this project is publicly available on Zenodo: [https://doi.org/10.5281/zenodo.16326468](url)
+👉 The dataset curated for this project is publicly available on Zenodo: [https://doi.org/10.5281/zenodo.16326468](url)   [https://zenodo.org/records/16326468](url)
 
 ## 📚 Citation
 
