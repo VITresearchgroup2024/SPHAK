@@ -76,7 +76,15 @@ pip install .
 
 ``
 !git clone https://github.com/VITresearchgroup2024/SPHAK.git
+``
+
+
+``
 %cd SPHAK
+``
+
+
+``
 !pip install .
 ``
 
@@ -90,7 +98,15 @@ options:
 
 ``
   -h, --help            #show this help message and exit
+``
+
+``
   --input INPUT         #Path to FASTA file
+``
+
+
+
+``
   --host_type {animal,plant}
                         #Host type
 ``
