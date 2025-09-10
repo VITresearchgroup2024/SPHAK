@@ -79,10 +79,12 @@ def remove_shared_and_overlapping_kmers(family_kmers):
 train_df = pd.read_csv('/content/train_data.csv')
 
 # Define k-range for optimization
-k_range_full = list(range(6, 7))  # From k=3 to k=251 or analysing each kmers one at a time
+k_range_full = list(range(6, 7))
 
 # Dictionary to store results per k
 all_k_results = {}
+
+print("✅ k-mer size is selected as 6 automatically.")
 
 for k in k_range_full:
     print(f"Processing k = {k}...")
@@ -102,8 +104,6 @@ for k in k_range_full:
 
 # Choose best k for testing (based on evaluation logic or manually e.g., k=6)
 best_k_for_testing = 6
-
-print("✅ k-mer size is selected as 6 automatically.")
 
 
 # Retrieve best model from dict
