@@ -45,6 +45,7 @@ Linux / macOS / Windows PowerShell
 
 ``bash
 git clone https://github.com/VITresearchgroup2024/SPHAK.git
+`
 cd SPHAK
 ``
 
