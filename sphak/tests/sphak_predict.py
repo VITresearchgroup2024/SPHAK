@@ -181,4 +181,6 @@ plt.show()
 test_df['Best_Family'] = best_families
 test_df['Prediction'] = predictions
 test_df['Prediction_Score'] = y_scores
-test_df.to_csv('reference_database.csv', index=False)
+test_df.to_csv('results.csv', index=False)
+
+print("Results saved as results.csv")
