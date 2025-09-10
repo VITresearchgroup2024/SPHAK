@@ -1,7 +1,9 @@
 import pandas as pd
+from sklearn.model_selection import train_test_split  # ✅ Add this import
+
 # Load dataset
 try:
-    df = pd.read_csv('./data.csv', encoding='latin-1')
+    df = pd.read_csv('/content/influenza.csv', encoding='latin-1')
 except FileNotFoundError:
     print("The specified file was not found.")
     raise
@@ -19,11 +21,10 @@ for col in required_columns:
     if col not in df.columns:
         raise KeyError(f"Column '{col}' is missing in the dataset.")
 
-# Filter out categories with fewer than 2 samples in 'Host_agg', and 'Family'
+# Filter out categories with fewer than 2 samples in 'Host_agg', 'Family', and 'Species'
 valid_hosts = df['Host_agg'].value_counts()[df['Host_agg'].value_counts() > 1].index
 valid_families = df['Family'].value_counts()[df['Family'].value_counts() > 1].index
 valid_species = df['Species'].value_counts()[df['Species'].value_counts() > 1].index
-
 
 df_filtered = df[
     df['Host_agg'].isin(valid_hosts) &
@@ -34,7 +35,7 @@ df_filtered = df[
 # Check the filtered dataset
 print("Filtered dataset size:", len(df_filtered))
 
-# Create a stratification column by combining 'Host_agg', 'Species_agg', and 'Family'
+# Create a stratification column by combining 'Host_agg', 'Family', and 'Species'
 df_filtered = df_filtered.copy()  # Avoid SettingWithCopyWarning
 df_filtered['Stratify_col'] = (
     df_filtered['Host_agg'] + "_" +
@@ -58,7 +59,6 @@ train_df, test_df = train_test_split(
     random_state=42  # Ensure reproducibility
 )
 print("Stratification completed...")
-
 print("Splitting test and train completed...")
 
 # Verify the split
@@ -69,9 +69,8 @@ print(train_df['Stratify_col'].value_counts())
 print("Test set distribution:")
 print(test_df['Stratify_col'].value_counts())
 
+# Save the datasets
 test_df.to_csv("test_data.csv", index=False)
 print("Test data saved to 'test_data.csv'")
 train_df.to_csv("train_data.csv", index=False)
 print("Train data saved to 'train_data.csv'")
-
-
