@@ -1,5 +1,5 @@
 import pandas as pd
-from sklearn.model_selection import train_test_split  # ✅ Add this import
+from sklearn.model_selection import train_test_split 
 
 # Load dataset
 try:
