@@ -97,11 +97,7 @@ sphak --input <path_to_fasta_file> --host_type {animal,plant}
 example
 
 ``
-!sphak --input /content/sequences.fasta --host_type animal 
-``
-OR
-``
-sphak --input /content/sequences.fasta --host_type animal
+sphak --input /path/to/sequences.fasta --host_type animal
 ``
 
 options:
