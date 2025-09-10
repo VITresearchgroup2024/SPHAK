@@ -39,46 +39,41 @@ The method outputs predicted viral family and spillover risk through SP score(Sp
 
 ## ⚙️ Installation
 
-Linux / macOS
+1️. Clone the repository
 
-# It's recommended to use a virtual environment
+Linux / macOS / Windows PowerShell
+
+``bash
+git clone https://github.com/VITresearchgroup2024/SPHAK.git
+cd SPHAK
+``
+
+2️. Create and activate the virtual environment
+
 ``bash
 python3 -m venv venv
-source venv/bin/activate
+source venv/bin/activate #Linux / macOS
 ``
-# Install SPHAK
-``bash
-pip install .
-``
-
-Windows (PowerShell)
-
-# Create and activate virtual environment
 ``bash
 python -m venv venv
-venv\Scripts\activate
+venv\Scripts\activate #Windows (PowerShell)
 ``
 
-# Install SPHAK
+3️. Install the package
 ``bash
 pip install .
 ``
 
-Google Colab
-# Clone the repo
-``bash
+✅ For Google Colab
+``
 !git clone https://github.com/VITresearchgroup2024/SPHAK.git
 %cd SPHAK
-``
-# Install SPHAK
-``bash
 !pip install .
 ``
 
-3. Usage
+## Usage
+``
 sphak --input <path_to_fasta_file> --host_type {animal,plant}
-
-``bash
 options:
   -h, --help            show this help message and exit
   --input INPUT         Path to FASTA file
