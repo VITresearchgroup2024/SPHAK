@@ -47,6 +47,14 @@ pip install .
 
 Adjust installation steps as needed for your environment.
 
+usage: sphak [-h] --input INPUT --host_type {animal,plant}
+
+options:
+  -h, --help            show this help message and exit
+  --input INPUT         Path to FASTA file
+  --host_type {animal,plant}
+                        Host type
+
 ```
 ---
 
