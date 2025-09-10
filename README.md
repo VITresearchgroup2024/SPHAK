@@ -43,10 +43,10 @@ The method outputs predicted viral family and spillover risk through SP score(Sp
 
 Linux / macOS / Windows PowerShell
 
-``
+``bash
 git clone https://github.com/VITresearchgroup2024/SPHAK.git
 ``
-``
+``bash
 cd SPHAK
 ``
 
@@ -106,18 +106,4 @@ For questions, please open an issue or email:
 ✉️ ananyaprakash0105@gmail.com
 ✉️ kavyasree6424@gmail.com
 
-git clone https://github.com/VITresearchgroup2024/SPHAK.git
-cd SPHAK
-
-# Create and activate virtual environment, then install
-
-# For Linux / macOS
-python3 -m venv venv
-source venv/bin/activate
-pip install .
-
-# For Windows (PowerShell)
-python -m venv venv
-venv\Scripts\activate
-pip install .
 
