@@ -108,7 +108,7 @@ for family, kmers_obj in family_kmers.items():
 plot_kmers_distribution_combined(family_kmers, k_range)
 
 # Save results
-with open('animal_reference_database_excluding_out_of_sample.pkl', 'wb') as f:
+with open('animal_reference_database_excluding_out_of_sample.pkl', 'wb') as f: #change the name if needed
     pickle.dump({'family_kmers': dict(family_kmers), 'total_kmers': dict(total_kmers)}, f)
 
 print("Filtered k-mers with occurrences and total k-mer counts saved to 'animal_reference_database_excluding_out_of_sample.pkl'")
