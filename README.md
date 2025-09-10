@@ -66,11 +66,14 @@ venv\Scripts\activate #Windows (PowerShell)
 ``
 
 3️. Install the package
+
 ``
 pip install .
 ``
 
 ✅ For Google Colab
+
+
 ``
 !git clone https://github.com/VITresearchgroup2024/SPHAK.git
 %cd SPHAK
@@ -78,13 +81,18 @@ pip install .
 ``
 
 ## Usage
+
 ``
 sphak --input <path_to_fasta_file> --host_type {animal,plant}
+``
+
 options:
-  -h, --help            show this help message and exit
-  --input INPUT         Path to FASTA file
+
+``
+  -h, --help            #show this help message and exit
+  --input INPUT         #Path to FASTA file
   --host_type {animal,plant}
-                        Host type
+                        #Host type
 ``
 
 ---
