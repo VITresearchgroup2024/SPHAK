@@ -16,10 +16,10 @@ def filter_kmers(kmers):
     return [kmer for kmer in kmers if 'X' not in kmer]
 
 # === Load the Test Dataset ===
-test_df = pd.read_csv('out_of_sample.csv')
+test_df = pd.read_csv('/content/test_data.csv')
 
 # === Load the Reference Database ===
-with open('animal_reference_database_including_out_of_sample.pkl', 'rb') as f:  # Add plant reference database when dealing with plant data 
+with open('/content/influenza.pkl', 'rb') as f:  # Add plant reference database when dealing with plant data 
     data = pickle.load(f)
 
 family_kmers = data['family_kmers']
@@ -42,7 +42,7 @@ for family, kmer_set in family_kmer_sets.items():
         print(f"Warning: Family '{family}' has no k-mers and will be skipped.")
         continue
 
-    bloom_filter = BloomFilter(capacity=len(kmer_set), error_rate=0.01)
+    bloom_filter = bloom_filter = BloomFilter(max_elements=len(kmer_set), error_rate=0.01)
     for kmer in kmer_set:
         bloom_filter.add(kmer)
     family_bloom_filters[family] = bloom_filter
