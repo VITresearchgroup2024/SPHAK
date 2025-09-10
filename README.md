@@ -43,9 +43,10 @@ The method outputs predicted viral family and spillover risk through SP score(Sp
 
 Linux / macOS / Windows PowerShell
 
-``bash
+``
 git clone https://github.com/VITresearchgroup2024/SPHAK.git
-`
+``
+``
 cd SPHAK
 ``
 
