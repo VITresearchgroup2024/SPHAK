@@ -1,3 +1,4 @@
+import pandas as pd
 # Load dataset
 try:
     df = pd.read_csv('./data.csv', encoding='latin-1')
