@@ -19,7 +19,7 @@ def filter_kmers(kmers):
 test_df = pd.read_csv('/content/test_data.csv')
 
 # === Load the Reference Database ===
-with open('/content/influenza.pkl', 'rb') as f:  # Add plant reference database when dealing with plant data 
+with open('animal_reference_database_including_out_of_sample.pkl', 'rb') as f:  # Add plant reference database when dealing with plant data 
     data = pickle.load(f)
 
 family_kmers = data['family_kmers']
