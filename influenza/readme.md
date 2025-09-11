@@ -1,20 +1,6 @@
-🦠 Influenza Virus Case Study
+### Influenza Virus Case Study
 
 This part explain the application of SPHAK using Influenza.
-
-📂 Folder Structure
-influenza/
-├── data_curation.py                # Cleans and merges metadata with sequences
-├── host_mapping_animal.csv         # Mapping between host species and aggregated categories
-├── influenza_protein_metadata.csv  # Raw metadata file with virus details
-├── influenza_protein_sequence.fasta # Raw sequence data in FASTA format
-├── influenza_curated_protein_dataset.csv # Output after data curation
-├── split_test_train.py            # Stratified train-test split script
-├── influenza_train_data.csv       # Training dataset
-├── influenza_test_data.csv        # Testing dataset
-├── training/                      # Reference database generation script
-├── animal_reference_database.pkl  # Precomputed k-mer reference database
-├── readme.md                      # Documentation file (this file)
 
 
 1️. Data Curation (data_curation.py)
