@@ -16,10 +16,10 @@ def filter_kmers(kmers):
     return [kmer for kmer in kmers if 'X' not in kmer]
 
 # === Load the Test Dataset ===
-test_df = pd.read_csv('/content/test_data.csv')
+test_df = pd.read_csv('./test_data.csv')
 
 # === Load the Reference Database ===
-with open('animal_reference_database_including_out_of_sample.pkl', 'rb') as f:  # Add plant reference database when dealing with plant data 
+with open('animal_reference_database_including_out_of_sample.pkl', 'rb') as f:
     data = pickle.load(f)
 
 family_kmers = data['family_kmers']
@@ -30,8 +30,11 @@ family_kmer_sets = {}
 family_valid_ks = {}
 
 for family, kmers_obj in family_kmers.items():
-    family_kmer_sets[family] = set(kmers_obj['host_positive'].keys()).union(set(kmers_obj['host_negative'].keys()))
-    valid_kmers = set(len(k) for k in kmers_obj['host_positive'].keys()).union(set(len(k) for k in kmers_obj['host_negative'].keys()))
+    # Use 'homo' for host-positive; 'non_homo' for host-negative
+    pos_kmers = set(kmers_obj['homo'].keys())
+    neg_kmers = set(kmers_obj['non_homo'].keys())
+    family_kmer_sets[family] = pos_kmers.union(neg_kmers)
+    valid_kmers = set(len(k) for k in pos_kmers).union(set(len(k) for k in neg_kmers))
     family_valid_ks[family] = valid_kmers
 
 # === Initialize Bloom Filters ===
@@ -41,8 +44,7 @@ for family, kmer_set in family_kmer_sets.items():
     if len(kmer_set) == 0:
         print(f"Warning: Family '{family}' has no k-mers and will be skipped.")
         continue
-
-    bloom_filter = bloom_filter = BloomFilter(max_elements=len(kmer_set), error_rate=0.01)
+    bloom_filter = BloomFilter(max_elements=len(kmer_set), error_rate=0.01)
     for kmer in kmer_set:
         bloom_filter.add(kmer)
     family_bloom_filters[family] = bloom_filter
@@ -55,12 +57,12 @@ predictions = []
 
 for idx, row in test_df.iterrows():
     sequence = row['Sequence']
-    actual = row['Human']  # 'Plant' if plant data
+    actual = row['Human'] # For plant data, use 'Plant'
     y_true.append(actual)
 
     # === Generate k-mers for Testing ===
     test_kmers = set()
-    for k in range(6, 7):  # k-mer range: adjust if needed
+    for k in range(6, 7): 
         kmers = filter_kmers(generate_kmers(sequence, k))
         test_kmers.update(kmers)
 
@@ -96,8 +98,8 @@ for idx, row in test_df.iterrows():
         posterior = 0.5
     else:
         family_data = family_kmers[best_family]
-        total_host_positive = total_kmers[best_family]['host_positive']
-        total_host_negative = total_kmers[best_family]['host_negative']
+        total_host_positive = total_kmers[best_family]['homo']
+        total_host_negative = total_kmers[best_family]['non_homo']
         total_family = total_host_positive + total_host_negative
 
         if total_family == 0:
@@ -113,7 +115,7 @@ for idx, row in test_df.iterrows():
 
                 for k in valid_ks:
                     kmers = filter_kmers(generate_kmers(sequence, k))
-                    vocab_size = 20 ** k  # protein assumption
+                    vocab_size = 20 ** k # For protein k-mers
 
                     for i, kmer in enumerate(kmers):
                         if kmer not in family_kmer_sets[best_family]:
@@ -121,8 +123,8 @@ for idx, row in test_df.iterrows():
 
                         positions_covered = set(range(i, i + k))
                         if positions_covered.isdisjoint(unique_positions_contributed):
-                            h = family_data['host_positive'].get(kmer, 0)
-                            nh = family_data['host_negative'].get(kmer, 0)
+                            h = family_data['homo'].get(kmer, 0)
+                            nh = family_data['non_homo'].get(kmer, 0)
 
                             smoothing_factor = 0.1
                             p_positive = (h + smoothing_factor) / (total_host_positive + smoothing_factor * vocab_size)
@@ -156,7 +158,7 @@ for idx, row in test_df.iterrows():
                     denom = math.exp(log_likelihood_positive - max_log) + math.exp(log_likelihood_negative - max_log)
                     posterior = math.exp(log_likelihood_positive - max_log) / denom
 
-    posterior = np.clip(posterior, 0.0, 1.0)
+                posterior = np.clip(posterior, 0.0, 1.0)
     y_scores.append(posterior)
     predictions.append(1 if posterior > 0.5 else 0)
 
