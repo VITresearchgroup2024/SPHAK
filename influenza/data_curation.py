@@ -86,9 +86,9 @@ def remove_blank_host_rows(df, host_col):
 # Main script
 if __name__ == "__main__":
     # File paths
-    csv_files = ["./influenza_protein_metadata.csv"]  # Add more CSV paths as needed also add files need to be curated
-    fasta_files = ["./influenza_protein_sequence.fasta"]  # Add more FASTA paths as needed also add files need to be curated
-    mapping_file = "./host_mapping_animal.csv" # File path for the host mapping CSV file, change name and load 'host_mapping_plant.csv', if handling with plant data
+    csv_files = ["./influenza_protein_metadata.csv"] 
+    fasta_files = ["./influenza_protein_sequence.fasta"]  
+    mapping_file = "./host_mapping_animal.csv" # File path for the host mapping CSV file
 
     # Check if CSV and FASTA files are of the same length
     if len(csv_files) != len(fasta_files):
