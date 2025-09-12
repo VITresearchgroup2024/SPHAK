@@ -14,41 +14,31 @@ def filter_kmers(kmers):
 def analyze_sequence(fasta_file, data): 
     family_kmers = data['family_kmers']
     total_kmers = data['total_kmers']
-
     family_kmer_sets = {}
     family_valid_ks = {}
     family_bloom_filters = {}
-
     for family, kmers_obj in family_kmers.items():
         kmer_set = set(kmers_obj['homo'].keys()).union(kmers_obj['non_homo'].keys())
         valid_ks = set(len(k) for k in kmer_set)
-
         if not kmer_set:
             print(f"Warning: Family '{family}' has no k-mers and will be skipped.")
             continue
-
         bloom = BloomFilter(capacity=len(kmer_set), error_rate=0.01)
         for kmer in kmer_set:
             bloom.add(kmer)
-
         family_kmer_sets[family] = kmer_set
         family_valid_ks[family] = valid_ks
         family_bloom_filters[family] = bloom
-
     sequences = list(SeqIO.parse(fasta_file, "fasta"))
     result_rows = []
-
     print("\nSummary:")
     print("--------")
-
     for record in sequences:
         sequence_id = record.id
         sequence = str(record.seq).upper()
-
         test_kmers = set()
         for k in range(6, 7):
             test_kmers.update(filter_kmers(generate_kmers(sequence, k)))
-
         best_family = None
         max_overlap = -1
         for family, bloom in family_bloom_filters.items():
@@ -57,7 +47,6 @@ def analyze_sequence(fasta_file, data):
             if overlap > max_overlap:
                 best_family = family
                 max_overlap = overlap
-
         covered_positions = set()
         if best_family:
             for k in range(6, 7):
@@ -65,7 +54,6 @@ def analyze_sequence(fasta_file, data):
                     if kmer in family_kmer_sets[best_family]:
                         covered_positions.update(range(i, i + k))
         coverage = len(covered_positions) / len(sequence) if sequence else 0.0
-
         if best_family not in family_kmers:
             posterior = 0.5
         else:
@@ -73,64 +61,54 @@ def analyze_sequence(fasta_file, data):
             total_homo = total_kmers[best_family]['homo']
             total_non_homo = total_kmers[best_family]['non_homo']
             total_family = total_homo + total_non_homo
-
             if total_family == 0 or not family_valid_ks[best_family]:
                 posterior = 0.5
             else:
                 prior_homo = prior_non = 0.5
                 log_p_homo = log_p_non = 0.0
                 unique_positions_contributed = set()
-
                 for k in family_valid_ks[best_family]:
                     for i, kmer in enumerate(filter_kmers(generate_kmers(sequence, k))):
                         if kmer not in family_kmer_sets[best_family]:
                             continue
-
                         positions = set(range(i, i + k))
                         if positions.isdisjoint(unique_positions_contributed):
                             h = family_data['homo'].get(kmer, 0)
                             nh = family_data['non_homo'].get(kmer, 0)
                             vocab_size = 20 ** k
                             smoothing = 0.1
-
                             p_homo = (h + smoothing) / (total_homo + smoothing * vocab_size)
                             p_non = (nh + smoothing) / (total_non_homo + smoothing * vocab_size)
-
                             temp = 1.5
                             p_homo, p_non = p_homo**temp, p_non**temp
                             p_total = p_homo + p_non
                             p_homo /= p_total
                             p_non /= p_total
-
                             log_p_homo += math.log(p_homo)
                             log_p_non += math.log(p_non)
                             unique_positions_contributed.update(positions)
-
                 if not unique_positions_contributed:
                     posterior = 0.5
                 else:
                     log_p_homo /= len(unique_positions_contributed)
                     log_p_non /= len(unique_positions_contributed)
-
                     log_likelihood_homo = math.log(prior_homo) + log_p_homo
                     log_likelihood_non = math.log(prior_non) + log_p_non
                     max_log = max(log_likelihood_homo, log_likelihood_non)
-
                     denominator = math.exp(log_likelihood_homo - max_log) + math.exp(log_likelihood_non - max_log)
                     posterior = math.exp(log_likelihood_homo - max_log) / denominator
-
         posterior = np.clip(posterior, 0.0, 1.0)
-        prediction = 1 if posterior > 0.5 else 0
-
+        
+        # Updated prediction logic with coverage threshold
+        prediction = 1 if (posterior > 0.5 and coverage > 0.25) else 0
+        
         # Human-readable summary
         if prediction == 1:
             print(f"The best family for the sequence '{sequence_id}' is '{best_family}', predicted to infect human with a score of {posterior:.4f} and coverage {coverage:.4f}.")
         else:
             print(f"The best family for the sequence '{sequence_id}' is '{best_family}', but it is NOT predicted to infect human (score = {posterior:.4f}, coverage = {coverage:.4f}).")
-
         # Add to table output
         result_rows.append([sequence_id, best_family, prediction, round(posterior, 4), round(coverage, 4)])
-
     # Tabular result
     print("\nTabular Result:")
     print(tabulate(result_rows, headers=["Sequence_ID", "Best_Family", "Prediction", "Prediction_Score", "Coverage"], tablefmt="grid"))
