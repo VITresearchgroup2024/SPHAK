@@ -100,7 +100,7 @@ def analyze_sequence(fasta_file, data):
         posterior = np.clip(posterior, 0.0, 1.0)
         
         # Updated prediction logic with coverage threshold
-        prediction = 1 if (posterior > 0.5 and coverage > 0.25) else 0
+        prediction = 1 if (posterior > 0.5 and coverage > 0.30) else 0
         
         # Human-readable summary
         if prediction == 1:
