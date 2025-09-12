@@ -19,7 +19,7 @@ def filter_kmers(kmers):
 test_df = pd.read_csv('./test_data.csv')
 
 # === Load the Reference Database ===
-with open('animal_reference_database_including_out_of_sample.pkl', 'rb') as f:
+with open('animal_reference_database.pkl', 'rb') as f:
     data = pickle.load(f)
 
 family_kmers = data['family_kmers']
@@ -160,7 +160,7 @@ for idx, row in test_df.iterrows():
 
                 posterior = np.clip(posterior, 0.0, 1.0)
     y_scores.append(posterior)
-    predictions.append(1 if (posterior > 0.5 and coverage > 0.25) else 0)
+    predictions.append(1 if (posterior > 0.5 and coverage > 0.30) else 0)
 
 # === Evaluation ===
 accuracy = accuracy_score(y_true, predictions)
