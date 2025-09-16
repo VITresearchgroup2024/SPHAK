@@ -1,0 +1,923 @@
+Host,Host_agg
+Homo sapiens,human
+Vicugna pacos,Alpaca
+Kobus ellipsiprymnus,Antelope
+Oryx leucoryx,Antelope
+Tragelaphus strepsiceros,Antelope
+Gorilla gorilla,Ape
+Gorilla gorilla gorilla,Ape
+Pan paniscus,Ape
+Pan troglodytes,Ape
+Pan troglodytes schweinfurthii,Ape
+Pan troglodytes troglodytes,Ape
+Pongo pygmaeus pygmaeus,Ape
+Gorilla beringei beringei,Ape
+Mesosphaerum pectinatum,Bacteria
+Meles meles,Badger
+Mellivora capensis,Badger
+Melogale,Badger
+Melogale moschata,Badger
+Mephitidae,Badger
+Mephitis mephitis,Badger
+Chiroptera,Bat
+Eidolon helvum,Bat
+Eptesicus regulus,Bat
+Miniopterus schreibersii,Bat
+Myotis ricketti,Bat
+Rhinolophidae,Bat
+Rhinolophus ferrumequinum,Bat
+Rousettus aegyptiacus,Bat
+Tadarida brasiliensis,Bat
+Chaerephon plicatus,Bat
+Cynopterus brachyotis,Bat
+Dasypterus intermedius,Bat
+Dasypterus xanthinus,Bat
+Desmodus rotundus,Bat
+Eonycteris spelaea,Bat
+Epomophorus wahlbergi,Bat
+Epomops,Bat
+Eptesicus furinalis,Bat
+Eptesicus fuscus,Bat
+Eptesicus isabellinus,Bat
+Eptesicus serotinus,Bat
+Hipposideros armiger,Bat
+Hipposideros caffer,Bat
+Hipposideros cineraceus,Bat
+Hipposideros larvatus,Bat
+Hipposideros pomona,Bat
+Hipposideros pratti,Bat
+Hypsugo pulveratus,Bat
+Hypsugo savii,Bat
+Laephotis capensis,Bat
+Lasionycteris noctivagans,Bat
+Lasiurus borealis,Bat
+Lasiurus seminolus,Bat
+Macronycteris commersoni,Bat
+Macronycteris vittatus,Bat
+Miniopterus,Bat
+Miniopterus natalensis,Bat
+Miniopterus pusillus,Bat
+Mops condylurus,Bat
+Mops pumilus,Bat
+Murina cyclotis,Bat
+Murina leucogaster,Bat
+Myotis adversus,Bat
+Myotis altarium,Bat
+Myotis austroriparius,Bat
+Myotis brandtii,Bat
+Myotis capaccinii,Bat
+Myotis dasycneme,Bat
+Myotis daubentonii,Bat
+Myotis davidii,Bat
+Myotis laniger,Bat
+Myotis muricola,Bat
+Myotis nattereri,Bat
+Myotis nigricans,Bat
+Myotis siligorensis,Bat
+Myotis yumanensis,Bat
+Nyctalus plancyi,Bat
+Nyctinomops laticaudatus,Bat
+Otomops martiensseni,Bat
+Parastrellus hesperus,Bat
+Perimyotis subflavus,Bat
+Pipistrellus,Bat
+Pipistrellus abramus,Bat
+Pipistrellus kuhlii,Bat
+Pipistrellus nathusii,Bat
+Pipistrellus pipistrellus,Bat
+Pipistrellus pygmaeus,Bat
+Pteropodidae,Bat
+Pteropus,Bat
+Pteropus alecto,Bat
+Pteropus giganteus,Bat
+Pteropus scapulatus,Bat
+Rhinolophus,Bat
+Rhinolophus affinis,Bat
+Rhinolophus blythi,Bat
+Rhinolophus cornutus,Bat
+Rhinolophus eloquens,Bat
+Rhinolophus macrotis,Bat
+Rhinolophus malayanus,Bat
+Rhinolophus marshalli,Bat
+Rhinolophus pearsonii,Bat
+Rhinolophus pusillus,Bat
+Rhinolophus siamensis,Bat
+Rhinolophus sinicus,Bat
+Rhinolophus stheno,Bat
+Rousettus leschenaultii,Bat
+Rousettus sp.,Bat
+Scotophilus heathii,Bat
+Scotophilus kuhlii,Bat
+Stenodermatinae,Bat
+Tylonycteris pachypus,Bat
+Tylonycteris robustula,Bat
+Vespertilio sinensis,Bat
+Melursus ursinus,Bear
+Ursus americanus,Bear
+Ursus thibetanus laniger,Bear
+Martes foina,Beech Marten
+Anas platyrhynchos,Birds
+Columba livia,Birds
+Fratercula arctica,Birds
+Fulmarus glacialis,Birds
+Gallus gallus,Birds
+Larus smithsonianus,Birds
+Luscinia svecica,Birds
+Psittacus erithacus,Birds
+Pygoscelis adeliae,Birds
+Rissa tridactyla,Birds
+Serinus canaria,Birds
+Aythya affinis,Birds
+Aythya ferina,Birds
+Branta canadensis,Birds
+Bubo scandiacus,Birds
+Bubulcus ibis,Birds
+Cairina moschata,Birds
+Calidris fuscicollis,Birds
+Calidris ruficollis,Birds
+Charadriiformes,Birds
+Chroicocephalus genei,Birds
+Chroicocephalus ridibundus,Birds
+Ciconia nigra,Birds
+Columba,Birds
+Columbidae,Birds
+Corythornis cristatus,Birds
+Coturnix japonica,Birds
+Curruca curruca,Birds
+Cygnus olor,Birds
+Eos bornea,Birds
+Eurillas virens,Birds
+Falco peregrinus,Birds
+Fratercula corniculata,Birds
+Fringilla montifringilla,Birds
+Fringillidae,Birds
+Fulica atra,Birds
+Galliformes,Birds
+Gallus,Birds
+Gallus sp.,Birds
+Grus nigricollis,Birds
+Himantopus himantopus,Birds
+Hirundo rustica,Birds
+Hydrocoloeus minutus,Birds
+Laridae,Birds
+Larus argentatus,Birds
+Larus crassirostris,Birds
+Larus dominicanus,Birds
+Larus marinus,Birds
+Larus schistisagus,Birds
+Leucophaeus pipixcan,Birds
+Lophura erythrophthalma,Birds
+Lophura nycthemera,Birds
+Mareca,Birds
+Mareca americana,Birds
+Mareca falcata,Birds
+Mareca penelope,Birds
+Mareca strepera,Birds
+Meleagris gallopavo,Birds
+Myiopsitta monachus,Birds
+Myrmoderus ferrugineus,Birds
+Netta rufina,Birds
+Numenius arquata,Birds
+Numididae,Birds
+Numididae sp.,Birds
+Oceanodroma homochroa,Birds
+Otis tarda,Birds
+Oxyura jamaicensis,Birds
+Passeridae,Birds
+Pavo,Birds
+Pavo cristatus,Birds
+Phalacrocoracidae,Birds
+Phaseolus vulgaris,Birds
+Phasianinae,Birds
+Phasianus colchicus,Birds
+Ploceus melanocephalus,Birds
+Ploceus vitellinus,Birds
+Pluvialis squatarola,Birds
+Pseudopodoces humilis,Birds
+Psittacidae,Birds
+Psittaciformes,Birds
+Rallus aquaticus,Birds
+Riparia paludicola,Birds
+Sibirionetta formosa,Birds
+Spatula clypeata,Birds
+Spatula discors,Birds
+Spatula querquedula,Birds
+Spilopelia chinensis,Birds
+Sternula albifrons,Birds
+Streptopelia decaocto,Birds
+Struthio camelus,Birds
+Tadorna,Birds
+Tadorna tadorna,Birds
+Threskiornithidae,Birds
+Turdus merula,Birds
+Uria aalge,Birds
+Zosteropidae,Birds
+Bovidae,Bovids
+Bubalus bubalis,Buffalo
+Syncerus caffer,Buffalo
+Boselaphus tragocamelus,Bull
+Camelus dromedarius,Camel
+Camelus,Camel
+Camelus bactrianus,Camel
+Canidae,Canidae
+Canis,Canidae
+Felis catus,Cat 
+Bos ,Cattle
+Bos taurus,Cattle
+Cetacea,Cetacea
+Pan troglodytes verus,Chimpanzee
+Axis axis,Chital
+Civettictis civetta,Civet
+Paradoxurus hermaphroditus,Civets
+Paradoxurus zeylonensis,Civets
+Spilogale,Civets
+Spilogale putorius,Civets
+Viverridae,Civets
+Puma concolor,Cougar
+Canis latrans,Coyote
+Crustacea,Crustacea
+Capreolus capreolus,Deer
+Cervus,Deer
+Cervus elaphus,Deer
+Rangifer tarandus,Deer
+Cervidae,Deer
+Cervus nippon,Deer
+Dama dama,Deer
+Hydropotes inermis,Deer
+Odocoileus virginianus,Deer
+Rusa unicolor,Deer
+Canis lupus familiaris,Dog
+Cerdocyon thous,Dog
+Sousa chinensis,Dolphin
+Tursiops truncatus,Dolphin
+Lagenorhynchus albirostris,Dolphin
+Equus asinus,Donkey
+Feliformia,Feliformia
+Mustela putorius furo,Ferret
+Astyanax mexicanus,Fish
+Carassius auratus x Cyprinus carpio,Fish
+Coryphaenoides rupestris,Fish
+Gadus morhua,Fish
+Silurus glanis,Fish
+Sparus aurata,Fish
+Trematomus bernacchii,Fish
+Xiphophorus birchmanni,Fish
+Carassius auratus,Fish
+Channidae,Fish
+Chanodichthys erythropterus,Fish
+Clupea harengus,Fish
+Clupea pallasii,Fish
+Ctenopharyngodon idella,Fish
+Cyprinus carpio,Fish
+Cyprinus carpio nudus,Fish
+Dorosoma cepedianum,Fish
+Esox lucius,Fish
+Fundulus heteroclitus heteroclitus,Fish
+Hoplichthys,Fish
+Kareius bicoloratus,Fish
+Lepomis macrochirus,Fish
+Limanda limanda,Fish
+Merlangius merlangus,Fish
+Micropterus salmoides,Fish
+Monopterus albus,Fish
+Morone chrysops,Fish
+Neogobius melanostomus,Fish
+Oncorhynchus kisutch,Fish
+Oncorhynchus mykiss,Fish
+Oncorhynchus tshawytscha,Fish
+Paralichthys olivaceus,Fish
+Perca fluviatilis,Fish
+Percidae,Fish
+Phocoena phocoena,Fish
+Platichthys flesus,Fish
+Pleuronectes platessa,Fish
+Salmo carpio,Fish
+Salmo salar,Fish
+Salmo trutta,Fish
+Salmo trutta fario,Fish
+Salmoninae,Fish
+Salvelinus fontinalis,Fish
+Sander lucioperca,Fish
+Sardinops sagax,Fish
+Scoliodon macrorhynchos,Fish
+Scophthalmus maximus,Fish
+Siniperca chuatsi,Fish
+Sprattus sprattus sprattus,Fish
+Synodus macrops,Fish
+Tinca tinca,Fish
+Trachinotus ovatus,Fish
+Channa argus,Fish 
+Hippoboscidae,Fly
+Hydrellia griseola,Fly
+Otocyon megalotis,Fox
+Urocyon cinereoargenteus,Fox
+Vulpes,Fox
+Vulpes lagopus,Fox
+Vulpes vulpes,Fox
+Leptobrachium leishanense,Frog
+Rana jiemuxiensis,Frog
+Rhinella marina,Frog
+Boana pugnax,Frog
+Dryophytes cinereus,Frog
+Bactrocera latifrons,Fruit fly
+Bactrocera zonata,Fruit fly
+Drosophila affinis,Fruit fly
+Drosophila ananassae,Fruit fly
+Drosophila melanogaster,Fruit fly
+Drosophila obscura,Fruit fly
+Drosophila sturtevanti,Fruit fly
+Hemidactylus frenatus,Gecko
+Giraffa camelopardalis,Giraffe
+Capra hircus,Goat
+Rupicapra rupicapra rupicapra,Goat
+Erinaceinae,Hedgehog
+Erinaceus amurensis,Hedgehog
+Hippopotamus,Hippopotamus
+Equus caballus,Horse
+Equus ferus,Horse
+Crocuta crocuta,Hyena
+Hyaena hyaena,Hyena
+Bactrocera correcta,Insects
+Ceratitis capitata,Insects
+Choristoneura rosaceana,Insects
+Chrysomya megacephala,Insects
+Chrysura austriaca,Insects
+Chrysura radians,Insects
+Conocephalus maculatus,Insects
+Culicoides,Insects
+Culicoides austropalpalis,Insects
+Culicoides brevitarsis,Insects
+Culicoides insignis,Insects
+Culicoides peregrinus,Insects
+Culicoides punctatus,Insects
+Diptera,Insects
+Frankliniella intonsa,Insects
+Gerridae,Insects
+Heterodontonyx,Insects
+Hyalopterus pruni,Insects
+Ia io,Insects
+Insecta,Insects
+Ischnura senegalensis,Insects
+Lutzomyia,Insects
+Musca domestica,Insects
+Nephotettix cincticeps,Insects
+Nyssomyia flaviscutellata,Insects
+Orgyia pseudotsugata,Insects
+Phlebotomus,Insects
+Phlebotomus papatasi,Insects
+Phlebotomus perfiliewi,Insects
+Pompilus cinereus,Insects
+Sergentomyia,Insects
+Siphonaptera,Insects
+Solenopsis invicta,Insects
+Spodoptera frugiperda,Insects
+Thrips tabaci,Insects
+Tipula scripta,Insects
+Triodia sylvina,Insects
+Canis mesomelas,Jackal
+Phascolarctos cinereus,Koala
+Panthera uncia,Leopard
+Panthera pardus,Leopard 
+Panthera leo,Lion
+Podarcis guadarramae,Lizard
+Cryptoblepharus virgatus,Lizard
+Macaca arctoides,Macaque
+Macaca fascicularis,Macaque
+Macaca fuscata,Macaque
+Macaca mulatta,Macaque
+Macaca nemestrina,Macaque
+Martes flavigula,Marten
+Dipseliopoda,Millipede
+Mustela lutreola,Mink
+Galidia elegans,Mongoose
+Herpestidae,Mongoose
+Suricata suricatta,Mongoose
+Allochrocebus solatus,Monkey
+Colobus guereza,Monkey
+Mandrillus leucophaeus,Monkey
+Mandrillus sphinx,Monkey
+Miopithecus ogouensis,Monkey
+Piliocolobus tephrosceles,Monkey
+Callithrix geoffroyi,Monkey
+Cercopithecus mitis,Monkey
+Chlorocebus aethiops,Monkey
+Colobus,Monkey
+Macaca,Monkey
+Coquillettidia albicosta,Mosquito
+Coquillettidia maculipennis,Mosquito
+Culex,Mosquito
+Culex annulioris,Mosquito
+Culex annulirostris,Mosquito
+Culex australicus,Mosquito
+Culex bitaeniorhynchus,Mosquito
+Culex decens,Mosquito
+Culex dunni,Mosquito
+Culex edwardsi,Mosquito
+Culex globocoxitus,Mosquito
+Culex perfuscus,Mosquito
+Culex pipiens,Mosquito
+Culex portesi,Mosquito
+Culex pruina,Mosquito
+Culex pseudovishnui,Mosquito
+Culex quinquefasciatus,Mosquito
+Culex sitiens,Mosquito
+Culex tarsalis,Mosquito
+Culex tritaeniorhynchus,Mosquito
+Culex zombaensis,Mosquito
+Culicinae,Mosquito
+Culiseta melanura,Mosquito
+Deinocerites,Mosquito
+Eretmapodites leucopous,Mosquito
+Eretmapodites quinquevittatus,Mosquito
+Haemagogus,Mosquito
+Mansonia africana,Mosquito
+Mansonia uniformis,Mosquito
+Ochlerotatus campestris,Mosquito
+Ochlerotatus cantans,Mosquito
+Ochlerotatus communis,Mosquito
+Ochlerotatus excrucians,Mosquito
+Ochlerotatus macintoshi,Mosquito
+Ochlerotatus sollicitans,Mosquito
+Ochlerotatus sp.,Mosquito
+Ochlerotatus taeniorhynchus,Mosquito
+Psorophora albigenu,Mosquito
+Trichoprosopon theobaldi,Mosquito
+Apodemus sylvaticus,Mouse
+Lepeophtheirus salmonis,Mouse
+Mus bufo,Mouse
+Mus caroli,Mouse
+Rhabdomys pumilio,Mouse
+Equus asinus x Equus caballus,Mule
+Lampsilis cardium,Mussel
+Margaritifera falcata,Mussel
+Mustelidae,Mustelidae
+Cynops orientalis,Newt
+Philander opossum,Opossum
+Manis javanica,Pangolin
+Pholidota,Pangolin
+Caligus rogercresseyi,Parasite
+Callithrix jacchus,Parasite
+Dermacentor nuttalli,Parasite
+Dermacentor silvarum,Parasite
+Dermacentor variabilis,Parasite
+Globodera pallida,Parasite
+Haemaphysalis bancrofti,Parasite
+Haemaphysalis concinna,Parasite
+Haemaphysalis doenitzi,Parasite
+Haemaphysalis hystricis,Parasite
+Haemaphysalis japonica,Parasite
+Haemaphysalis leporispalustris,Parasite
+Haemaphysalis longicornis,Parasite
+Haemaphysalis qinghaiensis,Parasite
+Hyalomma anatolicum anatolicum,Parasite
+Hyalomma asiaticum,Parasite
+Hyalomma scupense,Parasite
+Ixodes dentatus,Parasite
+Ixodes persulcatus,Parasite
+Ixodes scapularis,Parasite
+Ixodoidea,Parasite
+Rhipicephalus microplus,Parasite
+Schistocephalus solidus,Parasite
+Stethorus sp.,Parasite
+Tetrastichus brontispae,Parasite
+Toxocara,Parasite
+Trichobius sp.,Parasite
+Suidae,Pig
+Sus scrofa domesticus,Pig
+Sus scrofa scrofa,Pig
+Bacopa monnieri,Plant
+Carica papaya,Plant
+Chelidonium majus,Plant
+Chrysanthemum x morifolium,Plant
+Citrus,Plant
+Citrus aurantium,Plant
+Citrus reticulata,Plant
+Citrus sinensis,Plant
+Cnidium officinale,Plant
+Daphne odora,Plant
+Dioscorea cayenensis subsp. rotundata,Plant
+Diospyros kaki,Plant
+Elettaria cardamomum,Plant
+Fragaria,Plant
+Galinsoga parviflora,Plant
+Glycine max,Plant
+Helleborus,Plant
+Hibiscus rosa-sinensis,Plant
+Hypericum perforatum,Plant
+Ilex paraguariensis,Plant
+Ipomoea batatas,Plant
+Lactuca sativa,Plant
+Lotus corniculatus,Plant
+Lycium barbarum,Plant
+Macroptilium gracile var. longepedunculatum,Plant
+Malus domestica,Plant
+Medicago sativa,Plant
+Mirabilis jalapa,Plant
+Nicotiana benthamiana,Plant
+Nicotiana tabacum,Plant
+Nicotiana x edwardsonii,Plant
+Orchidaceae,Plant
+Oryza sativa,Plant
+Paris polyphylla var. yunnanensis,Plant
+Passiflora edulis,Plant
+Phalacrocorax auritus,Plant
+Physostegia,Plant
+Pittosporum,Plant
+Pittosporum tobira,Plant
+Plumbago indica,Plant
+Prunus persica,Plant
+Pyrus communis,Plant
+Ribes nigrum,Plant
+Rubus idaeus,Plant
+Sambucus nigra,Plant
+Smilax auriculata,Plant
+Solanum aculeatissimum,Plant
+Solanum lycopersicum,Plant
+Solanum melongena,Plant
+Solanum nigrum,Plant
+Solanum tuberosum,Plant
+Solanum villosum,Plant
+Solanum virginianum,Plant
+Sonchus oleraceus,Plant
+Stachys affinis,Plant
+Talipariti tiliaceum,Plant
+Thunbergia alata,Plant
+Tilia cordata,Plant
+Trichosanthes kirilowii,Plant
+Triticum aestivum,Plant
+Vasconcellea x heilbornii,Plant
+Vinca major,Plant
+Zanthoxylum,Plant
+Zea mays,Plant
+Zea mays subsp. mays,Plant
+Clerodendrum sp.,Plant
+Erethizon dorsatum,Porcupine
+Oryctolagus cuniculus,Rabbit
+Sylvilagus floridanus,Rabbit
+Nasua narica,Raccoon
+Nyctereutes procyonoides,Raccoon
+Potos flavus,Raccoon
+Procyon lotor,Raccoon
+Dasymys incomtus,Rat
+Pelomys isseli,Rat
+Praomys,Rat
+Rattus argentiventer,Rat
+Rattus losea,Rat
+Rattus rattus,Rat
+Rattus tanezumi,Rat
+Rhizomys,Rat
+Rhizomys pruinosus,Rat
+Bassariscus astutus,Ringtail
+Castor canadensis,Rodent
+Cricetidae,Rodent
+Gerbillinae,Rodent
+Micromys minutus,Rodent
+Mus musculus,Rodent
+Peromyscus maniculatus,Rodent
+Phodopus roborovskii,Rodent
+Rattus,Rodent
+Rattus norvegicus,Rodent
+Rodentia,Rodent
+Tscherskia triton,Rodent
+Gerbilliscus kempi,Rodent
+Leopoldamys edwardsi,Rodent
+Marmota caudata,Rodent
+Marmota monax,Rodent
+Microtus montanus,Rodent
+Myodes glareolus,Rodent
+Myodes rufocanus,Rodent
+Nematoda,Round Worms
+Trichechus manatus,Sea Cow
+Trichechus manatus latirostris,Sea Cow
+Trichechus manatus manatus,Sea Cow
+Enhydra lutris nereis,Sea otter
+Arctocephalus forsteri,Seal
+Leptonychotes weddellii,Seal
+Zalophus californianus,Seal
+Ovis aries,Sheep
+Soricidae,Shrew
+Crocidura,Shrew
+Sorex araneus,Shrew
+Suncus murinus,Shrew
+Choloepus hoffmanni,Sloth
+Boa imperator,Snake
+Morelia spilota spilota,Snake
+Boa constrictor,Snake
+Corallus annulatus,Snake
+Serpentes,Snake
+Trimeresurus macrops,Snake
+Ratufa macroura,Squirrel
+Spermophilus dauricus,Squirrel
+Panthera tigris tigris,Tiger
+Panthera tigris,Tiger
+Panthera tigris altaica,Tiger
+Duttaphrynus melanostictus,Toad
+Beta vulgaris,Plant
+Beta vulgaris subsp. vulgaris,Plant
+Brassica oleracea,Plant
+Colocasia,Plant
+Colocasia esculenta,Plant
+Cucumis sativus,Plant
+Cucurbita pepo var. melopepo,Plant
+Chlorion hirtum,Wasp
+Sus scrofa,Wild Boar
+Leopardus wiedii,Wild Cat
+Lynx,Wild Cat
+Otocolobus manul,Wild Cat
+Felis margarita,Wild Cat
+Lynx rufus,Wild Cat
+Canis lupus,Wolf
+Canis simensis,Wolf
+Proteles cristata,Wolf
+Gulo gulo,Wolverine 
+Bettongia penicillata,Woylie
+Bos grunniens,Yak
+Bos indicus,Zebu
+Pycnonotus jocosus,Birds
+Nyctalus velutinus,Bat
+Myotis lucifugus,Bat
+Muscicapidae,Birds
+Ardeidae,Birds
+Gallinula chloropus,Birds
+Turdus hortulorum,Birds
+Lonchura striata,Birds
+Erinaceus sp.,Hedgehog
+Apodemus ilex,Mouse
+Rhinolophus thomasi,Bat
+Hipposideros,Bat
+Myotis chinensis,Bat
+Plecotus auritus,Bat
+Rhinolophus hipposideros,Bat
+Mus,Mouse
+Pteropus rufus,Bat
+Rousettus madagascariensis,Bat
+Erinaceus europaeus,Hedgehog
+Rhinolophus acuminatus,Bat
+Apodemus peninsulae,Mouse
+Cynopterus sphinx,Bat
+Miniopterus fuliginosus,Bat
+Myotis sp.,Bat
+Pycnonotus sinensis,Birds
+Sabethes intermedius,Mosquito
+Mesocricetus auratus,Rodent
+Varroa jacobsoni,Parasite
+Trifolium pratense,Plant
+Styphnolobium japonicum,Plant
+Fragaria vesca,Plant
+Fragaria x ananassa,Plant
+Armigeres subalbatus,Mosquito
+Sclerotinia sclerotiorum,Plant
+Psychodidae,Insects
+Rosa hybrid cultivar,Plant
+Rhizoctonia solani,Fungus
+Ochlerotatus fulvus,Insects
+Sarcococca,Plant
+Aedes albopictus,Mosquito
+Amblyomma,Insects
+Ramphocelus carbo,Birds
+Culicidae,Mosquito
+Zoarces viviparus,Fish
+Veronica spicata,Plant
+Coriandrum sativum,Plant
+Ixodes ricinus,Parasite
+Apis cerana,Insects
+Apis mellifera,Insects
+Bombus impatiens,Insects
+Varroa destructor,Parasite
+Melophagus ovinus,Parasite
+Phoca vitulina,Seal
+Globicephala macrorhynchus,Whale
+Halichoerus grypus,Seal
+Paguma larvata,Civet
+Stenella coeruleoalba,Fish
+Balaenoptera physalus,Whale
+Physeter catodon,Whale
+Ailuropoda melanoleuca,Panda
+Phocoenidae,Fish
+Pusa sibirica,Seal
+Stenella longirostris,Fish
+Argas arboreus,Insects
+Alectorobius capensis,Insects
+Argas reflexus,Insects
+Argas,Insects
+Anatidae,Birds
+Aves,Birds
+Anas crecca,Birds
+Anser anser,Birds
+Anas acuta,Birds
+Anas carolinensis,Birds
+Anas cyanoptera,Birds
+Arenaria interpres,Birds
+Aix sponsa,Birds
+Anser cygnoides,Birds
+Anser sp.,Birds
+Anas,Birds
+Accipitriformes,Birds
+Accipitridae,Birds
+Dermacentor occidentalis,Insects
+Amblyomma gemma,Insects
+Paratemnopteryx couloniana,Insects
+Carios pusillus,Insects
+Paederus fuscipes,Insects
+Haemaphysalis formosensis,Insects
+Hyalomma marginatum,Insects
+Alveonasus lahorensis,Insects
+Lepus granatensis,Rabbit
+Apodemus flavicollis,Mouse
+Capra aegagrus,Goat
+Mastomys natalensis,Mouse
+Tupaia glis,Shrew
+Myocastor coypus,Rodent
+Potamochoerus porcus,Pig
+Philantomba monticola,Antelope
+Akodon montensis,Mouse
+Glis glis,Mouse
+Saimiri sciureus,Monkey
+Chloebia gouldiae,Birds
+Rhinolophus hildebrandti,Bat
+Ailurus fulgens,Panda
+Enhydra lutris,Sea otter
+Microtus arvalis,Vole
+Trematomus pennellii,Fish
+Rhynchobatus djiddensis,Fish
+Cercopithecus erythrotis,Monkey
+Delphinus delphis,Dolphin
+Centropristis striata,Fish
+Piliocolobus rufomitratus,Monkey
+Ateles paniscus,Monkey
+Cebus albifrons,Monkey
+Eliomys quercinus,Mouse
+Eclectus roratus,Birds
+Takifugu flavidus,Fish
+Odontophorus gujanensis,Quail
+Vespertilionidae sp.,Bat
+Taeniopygia castanotis,Birds
+Pseudoxenodon bambusicola,Snake
+Felis silvestris bieti,Civet
+Saxicola torquatus,Birds
+Sericulus ardens,Birds
+Sarcophilus harrisii,Quolls
+Marmota marmota marmota,Rodent
+Peromyscus leucopus,Mouse
+Pteridophora alberti,Birds
+Zonotrichia albicollis,Birds
+Melopsittacus undulatus,Birds
+Agapornis roseicollis,Birds
+Raja clavata,Fish
+Chaetodipus spinatus,Mouse
+Raphicerus campestris,Antelope
+Ursus arctos,Bear
+Lynx canadensis,Civet
+Saimiri boliviensis boliviensis,Monkey
+Orcinus orca,Whale
+Psittacula krameri,Birds
+Myotis pequinius,Bat
+Papio anubis,Monkey
+Chlorocebus pygerythrus,Monkey
+Cercopithecidae,Monkey
+Budorcas taxicolor tibetana,Antelope
+Indotestudo forstenii,Tortoise
+Tupaia chinensis,Shrew
+Macronycteris gigas,Bat
+Testudo hermanni,Tortoise
+Crocidura hirta,Shrew
+Hylomyscus,Mouse
+Miniopterus magnater,Bat
+Turdus pallidus,Birds
+Copsychus saularis,Birds
+Pusa hispida,Seal
+Cricetinae,Rodent
+Acari,Insects
+Aedes sp.,Mosquito
+Aedes aegypti,Mosquito
+Aedes circumluteolus,Mosquito
+Aedes,Mosquito
+Aedes vexans,Mosquito
+Aedes ochraceus,Mosquito
+Aedes cumminsii,Mosquito
+Formicarius analis,Birds
+Simiiformes,Monkey
+Cavia porcellus,Pig
+Antennarius striatus,Fish
+Artibeus lituratus,Bat
+Mus musculus domesticus,Mouse
+Cricetinae,Hamsters
+Forpus coelestis,Birds
+Pygoscelis antarcticus,Birds
+Parabuteo unicinctus,Birds
+Neophema chrysogaster,Birds
+Microcebus murinus,Mouse
+Microcebus griseorufus,Mouse
+Neopsephotus bourkii,Birds
+Bubo bengalensis,Birds
+Acanthorhynchus tenuirostris,Birds
+Aratinga solstitialis,Birds
+Pygoscelis papua,Penguins
+Gorilla beringei graueri,Monkey
+Grus japonensis,Birds
+Cebus imitator,Monkey
+Penaeus monodon,Prawn
+Anas superciliosa,Birds
+Anas castanea,Birds
+Tyto alba,Birds
+Penaeus stylirostris,Prawn
+Pogona vitticeps,Reptiles
+Bombyx mori,Insects
+Pezoporus flaviventris,Birds
+Anatinae,Birds
+Crithagra flaviventris,Birds
+Penaeus vannamei,Prawn
+Aix galericulata,Birds
+Taenia hydatigena,Parasite
+Lemur catta,Lemur
+Sapajus apella,Monkey
+Cacatua sanguinea,Birds
+Ninox boobook,Birds
+Culex nigripalpus,Mosquito
+Penaeus semisulcatus,Prawn
+Cercopithecus mona,Monkey
+Ceratotherium simum,Rhinoceros
+Macaca radiata,Monkey
+Bos,Bovine
+Chlorocebus sabaeus,Monkey
+Cercopithecus neglectus,Monkey
+Cercopithecus nictitans,Monkey
+Allochrocebus lhoesti,Monkey
+Rusa,Deer
+Molossus molossus,Bat
+Pudu puda,Deer
+Talpa europaea,Mole
+Rusa timorensis,Deer
+Rupicapra rupicapra,Antelope
+Phocoena spinipinnis,Fish
+Caracal caracal,Civet
+Betta splendens,Fish
+Neophocaena asiaeorientalis asiaeorientalis,Lion
+Varecia variegata,Lemur
+Eumops bonariensis,Bat
+Melanogrammus aeglefinus,Fish
+Lutjanus campechanus,Fish
+Okapia johnstoni,Giraffe
+Apodemus chevrieri,Mouse
+Phodopus sungorus,Hamsters
+Lagenorhynchus acutus,Dolphin
+Panthera leo persica,Lion
+Martes martes,Marten
+Arctocephalus gazella,Seal
+Leopardus pardalis,Civet
+Indri indri,Lemur
+Gorilla,Monkey
+Stenella sp. (in: whales & dolphins),Dolphin
+Pseudorca crassidens,Whale
+Ursus arctos horribilis,Bear
+Felis silvestris,Cat
+Prionailurus bengalensis,Cat
+Clethrionomys gapperi,Vole
+Neotoma albigula,Rat
+Callithrix penicillata,Monkey
+Diaemus youngi,Bat
+Arctocephalus australis,Seal
+Marmota flaviventris,Squirrel
+Lycalopex gymnocercus,Fox
+Apodemus uralensis,Mouse
+Stercorarius maccormicki,Birds
+Microtus agrestis,Vole
+Culex modestus,Mosquito
+Anopheles amictus,Mosquito
+Anopheles pharoensis,Mosquito
+Aedes opok,Mosquito
+Morus,Plant
+Anopheles gambiae,Mosquito
+Sesamia inferens,Insects
+Chilo suppressalis,Insects
+Ochlerotatus trivittatus,Mosquito
+Aedeomyia squamipennis,Mosquito
+Hipposideros cf. ruber,Bat
+Uroderma bilobatum,Bat
+Philantomba maxwellii,Antelope
+Catostomus commersonii,Fish
+Rhinolophus alcyone,Bat
+Lagothrix lagotricha,Monkey
+Alosa pseudoharengus,Fish
+Crocidura attenuata,Shrew
+Rhinolophus luctus,Bat
+Rhinolophus monoceros,Bat
+Hylobates sp.,Monkey
+Pongo pygmaeus,Monkey
+Anser,Birds
+Marmota himalayana,Birds
+Coracias garrulus,Birds
+Meriones unguiculatus,Rodent
+Sciurus vulgaris,Squirrel
+Corvus splendens,Birds
+Rattus andamanensis,Rat
+Calidris temminckii,Birds
+Acinonyx jubatus,Cheetah
+Pygoscelis antarcticus,Penguins
+Pycnonotidae,Birds
+Amblyomma americanum,tick
+Boophilus,tick
+Amblyomma testudinarium,tick
+Haliaeetus leucocephalus,Birds
+Anser caerulescens,Birds
+Falco rusticolus,Birds
