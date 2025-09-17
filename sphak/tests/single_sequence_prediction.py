@@ -28,10 +28,10 @@ family_valid_ks = {}
 
 for family, kmers_obj in family_kmers.items():
     # Store all k-mers as a set for quick intersection calculations
-    family_kmer_sets[family] = set(kmers_obj['homo'].keys()).union(set(kmers_obj['non_homo'].keys()))
+    family_kmer_sets[family] = set(kmers_obj['host_positive'].keys()).union(set(kmers_obj['host_negative'].keys()))
 
     # Extract valid k-mer lengths
-    valid_kmers = set(len(k) for k in kmers_obj['homo'].keys()).union(set(len(k) for k in kmers_obj['non_homo'].keys()))
+    valid_kmers = set(len(k) for k in kmers_obj['host_positive'].keys()).union(set(len(k) for k in kmers_obj['host_negative'].keys()))
     family_valid_ks[family] = valid_kmers
 
 # === Initialize Bloom Filters ===
@@ -99,8 +99,8 @@ for record in sequences:
         posterior = 0.5
     else:
         family_data = family_kmers[best_family]
-        total_homo = total_kmers[best_family]['homo']
-        total_non_homo = total_kmers[best_family]['non_homo']
+        total_homo = total_kmers[best_family]['host_positive']
+        total_non_homo = total_kmers[best_family]['host_negative']
         total_family = total_homo + total_non_homo
 
         if total_family == 0:
@@ -125,8 +125,8 @@ for record in sequences:
                         # Check if any position covered by this k-mer has already contributed
                         positions_covered = set(range(i, i + k))
                         if positions_covered.isdisjoint(unique_positions_contributed):  # No overlap
-                            h = family_data['homo'].get(kmer, 0)
-                            nh = family_data['non_homo'].get(kmer, 0)
+                            h = family_data['host_positive'].get(kmer, 0)
+                            nh = family_data['host_negative'].get(kmer, 0)
 
                             # Replace Laplace smoothing with adaptive smoothing
                             smoothing_factor = 0.1  # Reduce smoothing factor
