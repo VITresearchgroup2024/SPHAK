@@ -18,7 +18,7 @@ def analyze_sequence(fasta_file, data):
     family_valid_ks = {}
     family_bloom_filters = {}
     for family, kmers_obj in family_kmers.items():
-        kmer_set = set(kmers_obj['homo'].keys()).union(kmers_obj['non_homo'].keys())
+        kmer_set = set(kmers_obj['host_positive'].keys()).union(kmers_obj['host_negative'].keys())
         valid_ks = set(len(k) for k in kmer_set)
         if not kmer_set:
             print(f"Warning: Family '{family}' has no k-mers and will be skipped.")
@@ -58,8 +58,8 @@ def analyze_sequence(fasta_file, data):
             posterior = 0.5
         else:
             family_data = family_kmers[best_family]
-            total_homo = total_kmers[best_family]['homo']
-            total_non_homo = total_kmers[best_family]['non_homo']
+            total_homo = total_kmers[best_family]['host_positive']
+            total_non_homo = total_kmers[best_family]['host_negative']
             total_family = total_homo + total_non_homo
             if total_family == 0 or not family_valid_ks[best_family]:
                 posterior = 0.5
@@ -73,8 +73,8 @@ def analyze_sequence(fasta_file, data):
                             continue
                         positions = set(range(i, i + k))
                         if positions.isdisjoint(unique_positions_contributed):
-                            h = family_data['homo'].get(kmer, 0)
-                            nh = family_data['non_homo'].get(kmer, 0)
+                            h = family_data['host_positive'].get(kmer, 0)
+                            nh = family_data['host_negative'].get(kmer, 0)
                             vocab_size = 20 ** k
                             smoothing = 0.1
                             p_homo = (h + smoothing) / (total_homo + smoothing * vocab_size)
