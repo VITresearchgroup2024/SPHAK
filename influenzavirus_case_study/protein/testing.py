@@ -31,8 +31,8 @@ family_valid_ks = {}
 
 for family, kmers_obj in family_kmers.items():
     # Use 'homo' for host-positive; 'non_homo' for host-negative
-    pos_kmers = set(kmers_obj['homo'].keys())
-    neg_kmers = set(kmers_obj['non_homo'].keys())
+    pos_kmers = set(kmers_obj['host_positive'].keys())
+    neg_kmers = set(kmers_obj['host_negative'].keys())
     family_kmer_sets[family] = pos_kmers.union(neg_kmers)
     valid_kmers = set(len(k) for k in pos_kmers).union(set(len(k) for k in neg_kmers))
     family_valid_ks[family] = valid_kmers
@@ -98,8 +98,8 @@ for idx, row in test_df.iterrows():
         posterior = 0.5
     else:
         family_data = family_kmers[best_family]
-        total_host_positive = total_kmers[best_family]['homo']
-        total_host_negative = total_kmers[best_family]['non_homo']
+        total_host_positive = total_kmers[best_family]['host_positive']
+        total_host_negative = total_kmers[best_family]['host_negative']
         total_family = total_host_positive + total_host_negative
 
         if total_family == 0:
@@ -123,8 +123,8 @@ for idx, row in test_df.iterrows():
 
                         positions_covered = set(range(i, i + k))
                         if positions_covered.isdisjoint(unique_positions_contributed):
-                            h = family_data['homo'].get(kmer, 0)
-                            nh = family_data['non_homo'].get(kmer, 0)
+                            h = family_data['host_positive'].get(kmer, 0)
+                            nh = family_data['host_negative'].get(kmer, 0)
 
                             smoothing_factor = 0.1
                             p_positive = (h + smoothing_factor) / (total_host_positive + smoothing_factor * vocab_size)
