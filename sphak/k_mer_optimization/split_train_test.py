@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 
 # Load dataset
 try:
-    df = pd.read_csv('/content/influenza.csv', encoding='latin-1')
+    df = pd.read_csv('/influenza.csv', encoding='latin-1')
 except FileNotFoundError:
     print("The specified file was not found.")
     raise
