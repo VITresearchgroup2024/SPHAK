@@ -165,7 +165,7 @@ for record in sequences:
 
     posterior = np.clip(posterior, 0.0, 1.0)
     y_scores.append(posterior)
-    predictions.append(1 if (posterior > 0.5 and coverage > 0.30) else 0)
+    predictions.append(1 if (posterior > 0.5) else 0)
 
     # Print Results
     print(f"{sequence_id}\t{best_family}\t{predictions[-1]}\t{posterior:.4f}\t{coverage:.4f}")
