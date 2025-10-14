@@ -160,7 +160,7 @@ for idx, row in test_df.iterrows():
 
                 posterior = np.clip(posterior, 0.0, 1.0)
     y_scores.append(posterior)
-    predictions.append(1 if (posterior > 0.5 and coverage > 0.30) else 0)
+    predictions.append(1 if (posterior > 0.5) else 0)
 
 # === Evaluation ===
 accuracy = accuracy_score(y_true, predictions)
