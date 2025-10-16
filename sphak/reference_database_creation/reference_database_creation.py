@@ -69,7 +69,7 @@ def plot_kmers_distribution_combined(family_kmers, k_range):
 
 # Load dataset
 train_df = pd.read_csv('./animal_train.csv') # or plant_train
-k_range = list(range(6,7))  # Consider k-mers from size 6 to 6 (adjust as needed)
+k_range = list(range(6,7))  # Consider k-mers size 6 (adjust as needed)
 # Process k-mers
 family_kmers, total_kmers = process_kmers_by_family(train_df, k_range)
 
