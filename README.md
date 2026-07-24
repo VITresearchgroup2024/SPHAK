@@ -132,9 +132,11 @@ options:
 
 Citing this work
 If you use the code or data in this package, please cite:
+
+
 N. G., V., Prakash, A., Kavya, S. et al. Identifying host-specific patterns in viral protein sequences to predict host spillover risk in animal and plant kingdoms. Sci Rep 16, 21894 (2026). https://doi.org/10.1038/s41598-026-52373-2
 
-📬 Contact
+Contact
 For questions, please open an issue or email:
 ✉️ vibin@cmscollege.ac.in
 ✉️ vinning372@gmail.com
