@@ -11,7 +11,7 @@ Traditional models rely on ecological or phenotypic features, or focus primarily
   
 SPHAK can work with different virus families from various kingdoms.
 
-## 🔧 Pipeline Overview
+## Pipeline Overview
 
 SPHAK involves the following steps:
 
