@@ -37,7 +37,7 @@ The method outputs predicted viral family and spillover risk through SP score(Sp
 ![SP Score Formula](sphak/sp_score.png)
 
 
-## ⚙️ Installation
+## Installation
 
 1️. Clone the repository
 
@@ -71,7 +71,7 @@ venv\Scripts\activate #Windows (PowerShell)
 pip install .
 ``
 
-✅ For Google Colab
+  For Google Colab
 
 
 ``
@@ -119,19 +119,20 @@ options:
 
 ---
 
-## 📊 Dataset
+## Dataset
 
-👉 The dataset used in this study is publicly available on Zenodo:
+ The dataset used in this study is publicly available on Zenodo:
 
-🔗 [https://doi.org/10.5281/zenodo.16326468](https://doi.org/10.5281/zenodo.16326468)
+ [https://doi.org/10.5281/zenodo.16326468](https://doi.org/10.5281/zenodo.16326468)
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.16326468.svg)](https://doi.org/10.5281/zenodo.16326468)
 
 
-## 📚 Citation
+## Citation
 
-- Manuscript under review. Please contact the authors before citing.
-Developed by the VIT Research Team (2024–2025).
+Citing this work
+If you use the code or data in this package, please cite:
+N. G., V., Prakash, A., Kavya, S. et al. Identifying host-specific patterns in viral protein sequences to predict host spillover risk in animal and plant kingdoms. Sci Rep 16, 21894 (2026). https://doi.org/10.1038/s41598-026-52373-2
 
 📬 Contact
 For questions, please open an issue or email:
